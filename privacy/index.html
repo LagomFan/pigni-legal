@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://lagomfan.github.io/pigni-legal/privacy/">
+  <title>Pigni 法律文档</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; }
+    body { margin: 0; background: #f5f6f8; color: #17191d; }
+    main { box-sizing: border-box; max-width: 780px; margin: 0 auto; padding: 48px 22px 72px; }
+    article { background: #fff; border: 1px solid #e4e6ea; border-radius: 18px; padding: 28px; box-shadow: 0 8px 30px rgba(20, 24, 32, .06); }
+    h1 { margin-top: 0; font-size: 2rem; } h2 { margin-top: 2rem; font-size: 1.25rem; }
+    p, li { line-height: 1.75; } aside { padding: 2px 16px; border-left: 4px solid #5474e8; background: #f5f7ff; border-radius: 8px; }
+    a { color: #315bd6; }
+    @media (prefers-color-scheme: dark) { body { background: #101216; color: #f2f3f5; } article { background: #191c22; border-color: #30343d; } aside { background: #202737; } a { color: #8eabff; } }
+  </style>
+</head>
+<body data-source-sha256="0431302fbf8db00ec0160cde70c5eb6171826cce750ea991631bb741b594c2e6">
+  <main><article>
+<h1>猪妞（Pigni）隐私政策</h1>
+<aside><p>版本 1.0 · 生效日期：2026 年 8 月 15 日</p><p>个人信息处理者：Chentao Fan</p><p>隐私联系：xxxkkk0101@foxmail.com</p></aside>
+<p>猪妞坚持本地优先。本政策说明哪些信息只在设备上处理，以及你主动开启联网功能时哪些信息会发送给 Apple 或你配置的服务。</p>
+<h2>1. 我们处理哪些信息</h2>
+<p>账本默认保存在本机。你录入或导入的数据可能包括金额、币种、时间、商户、分类、账户、备注、标签、预算、退款或报销关系，以及候选账单和导入记录。</p>
+<p>使用截图识别时，App 会处理你选择的照片、账单截图、OCR 文字和识别结果；使用语音记账时，会处理录音及转写文字。App 还会保存功能开关、AI 模型配置、会员状态，以及不含账单正文、金额、商户、图片、提示词或密钥的结构化诊断日志。</p>
+<p>你主动提交意见反馈时，App 会发送反馈文字、App 与系统版本、设备类型和语言地区；联系方式、问题截图与结构化诊断仅在你选择后发送。结构化诊断只包含固定阶段、结果、匿名关联 ID、耗时和粗粒度数量，不包含账本、金额、商户、账户、截图内容、OCR 原文、AI 提示词或回复、URL 或密钥。</p>
+<h2>2. 本机存储与系统权限</h2>
+<p>相机、照片、麦克风、语音识别、通知和 Face ID / Touch ID 权限只在对应功能需要时申请。你可以在系统设置中撤回，撤回后相关功能可能不可用。App 只能收到生物识别是否通过的结果，不会取得生物特征模板。</p>
+<p>在所在地区、系统与 App 签名能力均可用时，FinanceKit 交易选择器只会向 App 提供你当次主动选择的交易。Pigni 将其保存为本地待确认候选，不会自动入账，不会发送到 Pigni 服务器，也不会保存原始 FinanceKit 账户标识。若你另行开启 iCloud 备份，这些已保存的候选交易可能随其他候选记录进入备份。</p>
+<p>第三方 AI 的 API Key 只存入本机 Keychain，不写入账本导出或 iCloud 备份；删除模型配置时可一并清除。Spotlight 索引默认关闭，开启后只在设备索引中保存商户、分类和日期。</p>
+<h2>3. AI 与 OCR</h2>
+<p>本机 OCR 会先从图片提取文字。只有你配置并启用第三方 AI、查看待发送范围且主动发起请求后，相关内容才会发送到你指定的服务地址。</p>
+<ul><li>账单识别默认只发送 OCR 文字。</li><li>原始图片默认关闭，只有你开启并在当次请求中确认后才发送。</li><li>AI 分析只发送你在设置中勾选的账本字段，不发送图片和 OCR 原文。</li></ul>
+<p>接收方、服务器位置、保留期限和后续使用规则取决于你配置的第三方 AI 服务。请同时阅读该服务的隐私政策；你可以不配置外部 AI，继续使用基础本机功能。</p>
+<h2>4. iCloud 备份</h2>
+<p>iCloud 备份默认关闭，属于会员可选功能。开启后，App 可按你的操作或设定，把账本、候选记录、账户、分类、规则、偏好和不含 API Key 的 AI 配置交由 Apple CloudKit 保存。它是备份，不是多人实时合并。</p>
+<p>来源截图不会进入新的 iCloud 备份；本机保存的来源图片可在“账本与数据 → 存储空间”中按安全边界清理。关闭自动备份只会停止后续自动上传，不等于删除已有云端备份；历史备份若曾包含来源截图，不会因关闭开关而自动删除。你可在“iCloud 备份”页面删除全部 LedgerSnapshot 云端备份；删除不需要当前具有会员资格或已开启自动备份，且不会删除本机账本。CloudKit 数据由 Apple 基础设施处理，并受你的 Apple ID、iCloud 设置和 Apple 条款约束。</p>
+<h2>5. 其他联网服务</h2>
+<ul><li>Apple 语音识别可能根据设备、系统版本和可用性，将音频或转写请求交由 Apple 处理。</li><li>会员购买、恢复购买和订阅状态通过 Apple StoreKit 处理；App 不取得你的完整支付卡资料。</li><li>查询汇率时，Frankfurter 仅收到原币种、账本币种和所选日期，不会收到金额、商户、备注、账户、截图或 OCR 文字。</li><li>意见反馈会经 HTTPS 发送到运营者自营服务器，用于处理问题、通知开发者和展示回复。反馈接口不需要 App 账号；服务器会对网络来源做不可逆的限流标识，用于防滥用。</li><li>本地通知由系统调度。导出和分享只在你主动操作时发生；文件离开 App 后，由你选择的目标应用或存储位置负责。</li></ul>
+<h2>6. 使用目的与共享边界</h2>
+<p>我们仅为记账、识别、分析、搜索、备份、订阅验证、安全保护、故障诊断和你明确要求的导出而处理信息。App 不接入广告追踪 SDK，不出售个人信息，也不以账本内容建立广告画像。</p>
+<p>除本政策列明的 Apple 服务、汇率服务、你指定的第三方 AI，以及你主动选择的导出目标外，不会把账本内容提供给其他接收方。法律另有强制要求的除外。</p>
+<h2>7. 保存、删除与撤回</h2>
+<p>本机数据通常保存到你删除记录、清除 App 数据或移除 App 数据为止；部分已删除账单会按页面提示在“最近删除”中短期保留。Keychain 中的密钥可能在卸载 App 后仍由系统保留，请在 AI 模型设置中先删除或清除。</p>
+<p>意见反馈历史在本机最多保留 20 条。服务器中的反馈与附件仅用于客户支持、回复和安全防滥用，默认最长保留 180 天。你可在 App 的反馈历史中删除某条反馈及其服务器记录、附件和公开回复，也可通过本政策列明的联系方式提出请求。删除后可在最长 30 天内保留不含反馈正文和原始客户端能力标识的最小删除记录，用于完成中断的清理和保证重复删除幂等。</p>
+<p>你可以在 App 内查看、更正、导出和删除账本数据，关闭 iCloud 备份、Spotlight、通知或第三方 AI，并在系统设置中撤回权限。第三方服务已经收到的数据，其保存和删除由对应服务规则决定。</p>
+<p>如需行使访问、复制、更正、删除、限制处理或撤回同意等权利，请通过本页列明的联系方式提出。</p>
+<h2>8. 安全措施</h2>
+<p>App 使用系统沙盒、Keychain、可选生物识别锁和后台隐私遮罩降低未授权访问风险。任何存储或传输方式都无法保证绝对安全，请妥善保管设备、Apple ID 和第三方服务密钥。</p>
+<h2>9. 未成年人</h2>
+<p>本 App 不以不满 14 周岁的未成年人为主要用户。若你不满 14 周岁，应在监护人同意和指导下使用；发现未经监护人同意处理了相关信息时，请联系运营者处理。</p>
+<h2>10. 跨境处理</h2>
+<p>第三方 AI 的接收方和服务器所在地由你填写的服务地址决定，可能位于境外。App 会在首次发送前说明数据类型并取得明确授权；若适用法律要求跨境单独同意、接收方告知或其他条件，运营者应在开放该路径前另行完成。你可以选择境内服务或不启用外部 AI。</p>
+<h2>11. 更新与联系</h2>
+<p>功能或处理方式发生实质变化时，我们会更新本政策，并通过 App 内提示等合理方式告知；依法需要重新同意的，会再次征得同意。</p>
+<p>个人信息处理者：Chentao Fan 隐私联系：xxxkkk0101@foxmail.com</p>
+  </article></main>
+</body>
+</html>
